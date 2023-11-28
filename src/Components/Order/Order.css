@@ -1,0 +1,73 @@
+.delivery_status {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.orders_list {
+    flex-direction: column;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.confirmed {
+    color: #535bf2;
+}
+
+.block_button{
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+}
+
+.delivery{
+    color: lawngreen;
+}
+
+.received{
+    color: gray;
+}
+
+.new {
+    color: yellow;
+    animation: vibrate 0.9s infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateX(-1px) translateY(-1px); /* Начальное смещение */
+    }
+    25% {
+        transform: translateX(1px) translateY(1px); /* Первый этап вибрации */
+    }
+    50% {
+        transform: translateX(-1px) translateY(-1px); /* Второй этап вибрации */
+    }
+    75% {
+        transform: translateX(1px) translateY(1px); /* Третий этап вибрации */
+    }
+    100% {
+        transform: translateX(-1px) translateY(-1px); /* Финальное смещение */
+    }
+}
+
+/*animation22: burn 2s ease-in-out infinite; !* Продолжительность анимации и повторение *!*/
+@keyframes burn {
+    0% {
+        color: red;
+        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; /* Тень текста для эффекта горения */
+    }
+    50% {
+        color: orange;
+        text-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange; /* Изменение цвета и тени */
+    }
+    100% {
+        color: red;
+        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; /* Возвращение к изначальному состоянию */
+    }
+}
