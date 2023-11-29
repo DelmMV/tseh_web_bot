@@ -5,6 +5,6 @@ import MainPage from "./Pages/MainPage/MainPage.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MainPage/>
+      <MainPage/>
   </React.StrictMode>,
 )
