@@ -76,7 +76,7 @@ export const dataJson = [{
 	"Address": "Индустриальный проспект, 26/24 (Банк ВТБ )",
 	"Latitude": 59.9479819999999960,
 	"Longitude": 30.4739179999999600,
-	"ClientComment": "Трубочки ",
+	"ClientComment": "Трубочки",
 	"Warm": false,
 	"Tableware": true,
 	"Congratulation": false,

@@ -9,6 +9,7 @@
     flex-direction: column;
     list-style: none;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .confirmed {
@@ -36,6 +37,11 @@
 .new {
     color: yellow;
     animation: vibrate 0.9s infinite;
+    z-index: -1;
+}
+
+.orders_item {
+    word-break: break-all;
 }
 
 @keyframes vibrate {

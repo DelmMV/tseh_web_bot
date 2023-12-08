@@ -1,0 +1,8 @@
+.wishes {
+    margin-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: var(--tg-theme-bg-color);
+    border-radius: 10px;
+    word-break: break-all;
+}

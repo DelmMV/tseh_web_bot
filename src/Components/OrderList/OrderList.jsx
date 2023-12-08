@@ -1,25 +1,23 @@
 import Order from "../Order/Order.jsx";
 import  './OrderList.css'
 
-function OrderList({data}) {
-	
-	
-	
+function OrderList(props) {
 	return (<ul className={'list'}>
-		{data.map(item => <li className={'item'}>
+		{props.data !== null ? (props.data.map((item, index) => <li key={index} className={'item'}>
 				<Order
 						ClientPhone = {item.ClientPhone}
 						WishingDate = {item.WishingDate}
 						Status = {item.Status}
 						DeliveryNumber = {item.DeliveryNumber}
-						Key = {item.OrderId}
+						OrderId = {item.OrderId}
 						ClientName = {item.ClientName}
 						Address = {item.Address}
 						ClientComment = {item.ClientComment}
 						Wishes = {item.Wishes}
 						Nearest = {item.Nearest}
+						
 				/>
-		</li>)}
+		</li>) ): (<p>Loading...</p>)}
 	</ul>)
 }
 

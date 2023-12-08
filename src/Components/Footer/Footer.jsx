@@ -1,14 +1,21 @@
 import './Footer.css'
+import {useEffect, useState} from "react";
 
-function Footer() {
+function Footer(props) {
+	const {intensive}= props
+	const [getIntensive, setGetIntensive] = useState([])
+	
+	useEffect(() => {
+		setGetIntensive(intensive)
+	}, [intensive])
 	return (
 			<div className={'footer'}>
 				<div className={'block_bottom'}>
 					<div className={'store'}>
-						ЦС Гражданский
+						{getIntensive ? getIntensive.ShopName : 'load'}
 					</div>
 					<span className={'intensive'}>
-					Интенсив: 90
+					Интенсив: {getIntensive ? getIntensive.AddDeliveryTime : 'load'}
 				</span>
 				</div>
 			</div>
