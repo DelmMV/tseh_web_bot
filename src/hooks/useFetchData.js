@@ -1,17 +1,16 @@
-import { useState, useEffect, useRef, memo } from "react";
+import {useState, useEffect, useRef, memo, useCallback, useContext} from "react";
 import {getOrderList, getIntensive, getOrder} from "../api/ApiRequst.js";
 
-function useFetchData(id = []) {
+function useFetchData() {
 	const [isLoading, setLoading] = useState(true);
 	const [isRefreshing, setRefreshing] = useState(false);
 	const [data, setData] = useState([]);
 	const [intensive, setIntensive] = useState(null);
-	//const [order, setOrder] = useState(null);
 	
-	const ref = useRef(null);
 	useEffect(() => {
 		getOrderList().then(async newPosts => {
 			setData(newPosts);
+			setLoading(false)
 		});
 	}, []);
 	
@@ -21,13 +20,7 @@ function useFetchData(id = []) {
 		})
 	}, [])
 	
-	// useEffect(() => {
-	// 	getOrder(id).then(async newOrder => {
-	// 		setOrder(newOrder)
-	// 	})
-	// }, [])
-	
-	return { data, intensive };
+	return { data, intensive, isLoading };
 }
 
 export default useFetchData

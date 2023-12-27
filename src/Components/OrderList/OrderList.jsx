@@ -1,23 +1,29 @@
 import Order from "../Order/Order.jsx";
-import  './OrderList.css'
+import './OrderList.css'
+import Empty from "../Empty/Empty.jsx";
 
-function OrderList(props) {
+function OrderList({data}) {
 	return (<ul className={'list'}>
-		{props.data !== null ? (props.data.map((item, index) => <li key={index} className={'item'}>
+		{
+			data.length === 0 ?  <Empty/> : (data.map((item) => <li key={item.OrderId} className={'item'}>
 				<Order
-						ClientPhone = {item.ClientPhone}
-						WishingDate = {item.WishingDate}
-						Status = {item.Status}
-						DeliveryNumber = {item.DeliveryNumber}
-						OrderId = {item.OrderId}
-						ClientName = {item.ClientName}
-						Address = {item.Address}
-						ClientComment = {item.ClientComment}
-						Wishes = {item.Wishes}
-						Nearest = {item.Nearest}
-						
+						item = {item}
+						ClientPhone={item.ClientPhone}
+						WishingDate={item.WishingDate}
+						Status={item.Status}
+						DeliveryNumber={item.DeliveryNumber}
+						OrderId={item.OrderId}
+						ClientName={item.ClientName}
+						Address={item.Address}
+						ClientComment={item.ClientComment}
+						Wishes={item.Wishes}
+						Nearest={item.Nearest}
+						CheckoutUserName={item.CheckoutUserName}
+						Latitude={item.Latitude}
+						Longitude={item.Longitude}
 				/>
-		</li>) ): (<p>Loading...</p>)}
+			</li>))
+		}
 	</ul>)
 }
 

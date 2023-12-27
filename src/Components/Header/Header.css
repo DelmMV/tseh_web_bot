@@ -1,16 +1,34 @@
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #242424;
-    padding: 2px;
 
 }
 
-.block_left {
-    margin: 5px;
-    padding: 0;
+.nav_link {
+    color: white;
+    font-size: 24px;
+}
 
+.active {
+    color: #535bf2;
+    cursor: default;
+}
+.canvas_link{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.canvas_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.navbar {
+    padding: 0px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.block_left {
+    margin-right: 10px;
 }
 
 .store {
@@ -26,7 +44,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin: 2px;
+    padding: 3px;
 }
+

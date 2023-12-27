@@ -1,10 +1,17 @@
 .delivery_status {
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 5px;
+    align-items: center;
+    margin: 0;
 }
 
+.bi {
+    font-size: 20px;
+}
+
+.text_client_name {
+    margin: 0;
+}
 .orders_list {
     flex-direction: column;
     list-style: none;
@@ -13,7 +20,7 @@
 }
 
 .confirmed {
-    color: #535bf2;
+    color: white;
 }
 
 .block_button{
@@ -27,21 +34,35 @@
 }
 
 .delivery{
-    color: lawngreen;
+    color: #1a1d20;
 }
 
 .received{
-    color: gray;
+    color: burlywood;
 }
 
 .new {
-    color: yellow;
+    color: black;
     animation: vibrate 0.9s infinite;
     z-index: -1;
 }
 
 .orders_item {
     word-break: break-all;
+}
+
+.client {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout_user_name {
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item {
+    padding: 7px;
 }
 
 @keyframes vibrate {

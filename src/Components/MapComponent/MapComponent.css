@@ -1,0 +1,6 @@
+.rectangle-marker {
+    width: 100px;
+    height: 50px;
+    background-color: #ff0000; /* Цвет фона прямоугольного маркера */
+    border: 2px solid #000; /* Обводка прямоугольного маркера */
+}

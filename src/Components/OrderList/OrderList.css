@@ -1,23 +1,24 @@
 .item {
     display: flex;
     flex-direction: column;
-    border-top-style: solid;
-    border-width: 1px;
+    min-width: 320px;
+    /*border-top-style: solid;*/
+    /*border-width: 1px;*/
 }
 
 .item:first-child {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .item:last-child {
-    border-bottom-style: solid;
-    border-width: 1px;
-    margin-bottom: 40px;
+
 }
 
 .list {
+    min-width: 100vw;
+    height: 100vh;
     margin: 0;
     list-style: none;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

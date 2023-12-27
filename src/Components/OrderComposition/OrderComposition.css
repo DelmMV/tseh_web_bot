@@ -1,0 +1,8 @@
+.order_composition {
+
+}
+
+.order_details {
+    display: flex;
+    flex-direction: column;
+}
